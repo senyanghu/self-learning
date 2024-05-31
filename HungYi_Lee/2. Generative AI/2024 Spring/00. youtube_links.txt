@@ -1,0 +1,9 @@
+https://speech.ee.ntu.edu.tw/~hylee/genai/2024-spring.php
+
+
+课程规划 https://www.youtube.com/watch?v=vCxyd_S4R24
+第0講：課程說明 https://www.youtube.com/watch?v=AVIKFXLCPY8
+第1講：生成式AI是什麼？https://www.youtube.com/watch?v=JGtqpQXfJis
+第2講：今日的生成式人工智慧厲害在哪裡？從「工具」變為「工具人」https://www.youtube.com/watch?v=glBhOQ1_RkE
+第3講：訓練不了人工智慧？你可以訓練你自己 https://www.youtube.com/watch?v=A3Yx35KrSN0
+第4講：訓練不了人工智慧？你可以訓練你自己 (中) — 拆解問題與使用工具 https://www.youtube.com/watch?v=lwe3_x50_uw
