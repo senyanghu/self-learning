@@ -40,8 +40,19 @@
 * `[DONE]` Basic theory [Week 2](https://www.youtube.com/watch?v=_j9MVVcvyZI)
 
 ### Extra Materials
-
 * [Gradient Descent (Demo by AOE)](https://www.youtube.com/watch?v=1_HBTJyWgNA)
 * [Beyond Adam (part 1)](https://www.youtube.com/watch?v=4pUmZ8hXlHM)
 * [Beyond Adam (part 2)](https://www.youtube.com/watch?v=e03YKGHXnL8)
+
+## 3/04	Lecture 3:Image as input
+
+### Preparation - zh
+* [Video](https://www.youtube.com/watch?v=OP5HcXJg2Aw)
+
+### Class Materials
+* `[DONE]` Validation [Week 3](https://www.youtube.com/watch?v=xQXh3fSvD1A)
+* `[DONE]` Why Deep [Week 3](https://www.youtube.com/watch?v=xQXh3fSvD1A)
+
+### Extra Materials
+* [Spatial Transformer Layer](https://www.youtube.com/watch?v=SoCywZ1hZak)
 
