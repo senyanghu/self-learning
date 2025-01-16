@@ -40,14 +40,14 @@
 * `[DONE]` Basic theory [Week 2](https://www.youtube.com/watch?v=_j9MVVcvyZI)
 
 ### Extra Materials
-* [Gradient Descent (Demo by AOE)](https://www.youtube.com/watch?v=1_HBTJyWgNA)
+* `[DONE]` [Gradient Descent (Demo by AOE)](https://www.youtube.com/watch?v=1_HBTJyWgNA)
 * [Beyond Adam (part 1)](https://www.youtube.com/watch?v=4pUmZ8hXlHM)
 * [Beyond Adam (part 2)](https://www.youtube.com/watch?v=e03YKGHXnL8)
 
 ## 3/04	Lecture 3:Image as input
 
 ### Preparation - zh
-* [Video](https://www.youtube.com/watch?v=OP5HcXJg2Aw)
+* CNN [Video](https://www.youtube.com/watch?v=OP5HcXJg2Aw)
 
 ### Class Materials
 * `[DONE]` Validation [Week 3](https://www.youtube.com/watch?v=xQXh3fSvD1A)
@@ -55,4 +55,19 @@
 
 ### Extra Materials
 * [Spatial Transformer Layer](https://www.youtube.com/watch?v=SoCywZ1hZak)
+
+## 3/11	Lecture 4:Sequence as input
+
+### Preparation - zh
+* [Video 1](https://www.youtube.com/watch?v=hYdO9CscNes)
+* [Video 2](https://www.youtube.com/watch?v=gmsMY5kc-zw)
+
+### Class Materials
+* 科技部 X Talent 課堂演講 (no video)
+
+### Extra Materials
+* [RNN (part 1)](https://www.youtube.com/watch?v=xCGidAeyS4M)
+* [RNN (part 2)](https://www.youtube.com/watch?v=rTqmWlnwz_0)
+* [GNN (part 1)](https://www.youtube.com/watch?v=eybCCtNKwzA)
+* [GNN (part 2)](https://www.youtube.com/watch?v=M9ht8vsVEw8)
 

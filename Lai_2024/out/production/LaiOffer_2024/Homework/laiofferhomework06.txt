@@ -1,0 +1,76 @@
+1. Power Of Two
+
+Determine if a given integer is power of 2.
+
+Examples
+
+16 is power of 2 (2 ^ 4)
+3 is not
+0 is not
+-1 is not
+
+
+public class Solution {
+  public boolean isPowerOfTwo(int number) {
+    // Write your solution here.
+    return false;
+  }
+}
+
+
+2.Number Of Different Bits
+Determine the number of bits that are different for two given integers.
+
+Examples
+
+5(“0101”) and 8(“1000”) has 3 different bits
+
+
+public class Solution {
+  public int diffBits(int a, int b) {
+    // Write your solution here.
+    return 0;
+  }
+}
+
+
+3.All Unique Characters II
+Determine if the characters of a given string are all unique.
+
+Assumptions
+
+We are using ASCII charset, the value of valid characters are from 0 to 255
+The given string is not null
+Examples
+
+all the characters in "abA+\8" are unique
+"abA+\a88" contains duplicate characters
+
+public class Solution {
+  public boolean allUnique(String word) {
+    // write your solution here
+    return false;
+  }
+}
+
+
+
+4.Hexadecimal Representation
+
+Generate the hexadecimal representation for a given non-negative integer number as a string. The hex representation should start with "0x".
+
+There should not be extra zeros on the left side.
+
+Examples
+
+0's hex representation is "0x0"
+255's hex representation is "0xFF"
+
+public class Solution {
+  public String hex(int number) {
+    // Write your solution here.
+    return "";
+  }
+}
+
+

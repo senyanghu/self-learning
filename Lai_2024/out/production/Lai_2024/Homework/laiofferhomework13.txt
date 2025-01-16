@@ -1,0 +1,92 @@
+1.Array Hopper II
+Given an array A of non-negative integers, you are initially positioned at index 0 of the array. A[i] means the maximum jump distance from index i (you can only jump towards the end of the array). Determine the minimum number of jumps you need to reach the end of array. If you can not reach the end of the array, return -1.
+
+Assumptions
+
+The given array is not null and has length of at least 1.
+Examples
+
+{3, 3, 1, 0, 4}, the minimum jumps needed is 2 (jump to index 1 then to the end of array)
+
+{2, 1, 1, 0, 2}, you are not able to reach the end of array, return -1 in this case.
+
+
+public class Solution {
+  public int minJump(int[] array) {
+    // Write your solution here.
+    return 0;
+  }
+}
+
+
+2.Dictionary Word I
+
+Given a word and a dictionary, determine if it can be composed by concatenating words from the given dictionary.
+
+Assumptions
+
+The given word is not null and is not empty
+The given dictionary is not null and is not empty and all the words in the dictionary are not null or empty
+Examples
+
+Dictionary: {“bob”, “cat”, “rob”}
+
+Word: “robob” return false
+
+Word: “robcatbob” return true since it can be composed by "rob", "cat", "bob"
+
+
+public class Solution {
+  public boolean canBreak(String input, String[] dict) {
+    // Write your solution here.
+    return false;
+  }
+}
+
+
+3.Edit Distance
+Given two strings of alphanumeric characters, determine the minimum number of Replace, Delete, and Insert operations needed to transform one string into the other.
+
+Assumptions
+
+Both strings are not null
+Examples
+
+string one: “sigh”, string two : “asith”
+
+the edit distance between one and two is 2 (one insert “a” at front then replace “g” with “t”).
+
+public class Solution {
+  public int editDistance(String one, String two) {
+    // Write your solution here.
+    return 0;
+  }
+}
+
+
+4.Largest Square Of 1s
+
+Determine the largest square of 1s in a binary matrix (a binary matrix only contains 0 and 1), return the length of the largest square.
+
+Assumptions
+
+The given matrix is not null and guaranteed to be of size N * N, N >= 0
+Examples
+
+{ {0, 0, 0, 0},
+
+  {1, 1, 1, 1},
+
+  {0, 1, 1, 1},
+
+  {1, 0, 1, 1}}
+
+the largest square of 1s has length of 2
+
+
+public class Solution {
+  public int largest(int[][] matrix) {
+    // Write your solution here.
+    return 0;
+  }
+}
