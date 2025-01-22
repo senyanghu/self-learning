@@ -38,8 +38,8 @@ public class RainbowSort {
 
     public static void main(String args[]) {
         RainbowSort rss = new RainbowSort();
-        //int[] array = { 0, -1, 1, 1, -1, 0, -1 };
-        int[] array = {-1, -1, -1, -1, -1};
+        int[] array = {0, -1, 1, 1, -1, 0, -1};
+        //int[] array = {-1, -1, -1, -1, -1};
         rss.rainbowSort(array);
         for (int element : array) {
             System.out.println(element);
