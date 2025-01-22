@@ -1,4 +1,4 @@
-package A_02_Recursion;
+package A_02_Recursion_BinarySearch;
 
 abstract class Dictionary {
     public Integer get(int index) {

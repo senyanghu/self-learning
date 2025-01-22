@@ -1,4 +1,4 @@
-package A_02_Recursion;
+package A_02_Recursion_BinarySearch;
 
 public class Q06_ClosestToTarget {
     public int closestToTarget(int[] nums, int target) {

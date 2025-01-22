@@ -1,4 +1,4 @@
-package A_02_Recursion;
+package A_02_Recursion_BinarySearch;
 
 public class Q02_Pow {
     // assume a != 0, b >= 0

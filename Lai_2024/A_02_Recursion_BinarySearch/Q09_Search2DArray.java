@@ -1,4 +1,4 @@
-package A_02_Recursion;
+package A_02_Recursion_BinarySearch;
 
 public class Q09_Search2DArray {
     public int[] searchMatrix(int[][] matrix, int target) {

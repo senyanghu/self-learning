@@ -1,4 +1,4 @@
-package A_02_Recursion;
+package A_02_Recursion_BinarySearch;
 
 public class Q07_KClosest {
     public int[] kClosest(int[] arr, int target, int k) {

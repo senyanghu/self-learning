@@ -1,4 +1,4 @@
-package A_02_Recursion;
+package A_02_Recursion_BinarySearch;
 
 public class Q03_BinarySearch {
     public int binarySearch(int[] array, int target) {
