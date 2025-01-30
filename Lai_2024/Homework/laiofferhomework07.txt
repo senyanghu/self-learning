@@ -5,7 +5,7 @@ Given a set of characters represented by a String, return a list containing all 
 Assumptions
 
 There are no duplicate characters in the original set.
-​Examples
+Examples
 
 Set = "abc", all the subsets are [“”, “a”, “ab”, “abc”, “ac”, “b”, “bc”, “c”]
 Set = "", all the subsets are [""]
