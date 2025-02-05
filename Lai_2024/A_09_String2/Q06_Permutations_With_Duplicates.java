@@ -1,9 +1,12 @@
-package A_07_Graph_2_DFS;
+package A_09_String2;
 
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
-public class Q02_Permutations {
+public class Q06_Permutations_With_Duplicates {
+
     public List<String> permutations(String set) {
         List<String> res = new ArrayList<>();
         if (set == null) {
@@ -19,11 +22,15 @@ public class Q02_Permutations {
             res.add(new String(chars));
             return;
         }
+        Set<Character> set = new HashSet<>();
         // 从index开始 这个题目最重要的地方
         for (int i = index; i < chars.length; i++) {
-            swap(chars, index, i);
-            dfs(chars, index + 1, res);
-            swap(chars, index, i);
+            if (!set.contains(chars[i])) {
+                set.add(chars[i]);
+                swap(chars, index, i);
+                dfs(chars, index + 1, res);
+                swap(chars, index, i);
+            }
         }
     }
 
@@ -31,10 +38,5 @@ public class Q02_Permutations {
         char temp = charArray[i];
         charArray[i] = charArray[j];
         charArray[j] = temp;
-    }
-
-    public static void main(String args[]) {
-        Q02_Permutations sol = new Q02_Permutations();
-        System.out.println(sol.permutations("abcd"));
     }
 }

@@ -70,7 +70,7 @@ public class Solution {
 
 
 5.ReOrder Array
-Given an array of elements, reorder it as follow:
+Given an array of elements, reorder it as follows:
 
 { N1, N2, N3, …, N2k } → { N1, Nk+1, N2, Nk+2, N3, Nk+3, … , Nk, N2k }
 
@@ -98,7 +98,7 @@ public class Solution {
 
 
 
-6. All Permutations II
+6. All Permutations II (String Permutation) - DFS经典
 Given a string with possible duplicate characters, return a list with all permutations of the characters.
 Examples
 * Set = “abc”, all permutations are [“abc”, “acb”, “bac”, “bca”, “cab”, “cba”]
