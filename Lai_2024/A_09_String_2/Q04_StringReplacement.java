@@ -1,4 +1,4 @@
-package A_09_String2;
+package A_09_String_2;
 
 // most hard-core method can be seen here: https://github.com/senyanghu/DaddyPlaypen/blob/master/src/com/laioffer/hw09/string_2/Q04_StringReplacement.java
 public class Q04_StringReplacement {

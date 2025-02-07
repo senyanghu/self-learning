@@ -1,4 +1,4 @@
-package A_09_String2;
+package A_09_String_2;
 
 import java.util.HashSet;
 import java.util.Set;

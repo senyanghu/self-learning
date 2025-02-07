@@ -1,4 +1,4 @@
-package A_09_String2;
+package A_09_String_2;
 
 // ABCDE12345 -> A1B2C3D4E5
 // 0   1   2   3   4   5   6  |  7   8    9    0    1    2    3

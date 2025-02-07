@@ -1,4 +1,4 @@
-package A_09_String2;
+package A_09_String_2;
 
 public class Q01_Reverse {
     public String reverse(String input) {

@@ -1,4 +1,4 @@
-package A_09_String2;
+package A_09_String_2;
 
 // check: https://github.com/senyanghu/DaddyPlaypen/blob/master/src/com/laioffer/hw09/string_2/Decompress.java
 public class Q07_DecompressString2 {

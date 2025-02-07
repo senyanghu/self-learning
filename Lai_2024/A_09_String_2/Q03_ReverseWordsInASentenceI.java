@@ -1,4 +1,4 @@
-package A_09_String2;
+package A_09_String_2;
 
 // step1: swap the whole sentence
 // step2: swap every single word (two pointer)

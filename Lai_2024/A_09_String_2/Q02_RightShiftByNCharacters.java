@@ -1,4 +1,4 @@
-package A_09_String2;
+package A_09_String_2;
 
 // abcd ef
 // W1   W2

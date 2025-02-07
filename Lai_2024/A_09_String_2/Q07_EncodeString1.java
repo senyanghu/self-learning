@@ -1,4 +1,4 @@
-package A_09_String2;
+package A_09_String_2;
 
 // aaaabccaaaaa -> a4b1c2a5
 // AAAAaaaa -> A4a4
