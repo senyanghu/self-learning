@@ -1,6 +1,6 @@
 package A_05_Heap_Graph_1;
 
-import A_04_Tree.TreeNode;
+import Utils.TreeNode;
 
 import java.util.LinkedList;
 import java.util.Queue;

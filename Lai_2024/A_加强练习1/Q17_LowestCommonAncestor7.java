@@ -1,6 +1,6 @@
 package A_加强练习1;
 
-import A_04_Tree.TreeNode;
+import Utils.TreeNode;
 
 // LCA in a BST
 // 想想BST的性质

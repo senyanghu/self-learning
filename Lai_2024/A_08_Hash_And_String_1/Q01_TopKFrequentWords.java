@@ -1,18 +1,10 @@
 package A_08_Hash_And_String_1;
 
+import Utils.Pair;
+
 import java.util.HashMap;
 import java.util.Map;
 import java.util.PriorityQueue;
-
-class Pair {
-    String word;
-    int freq;
-
-    Pair(String word, int freq) {
-        this.word = word;
-        this.freq = freq;
-    }
-}
 
 public class Q01_TopKFrequentWords {
     public String[] topKFrequent(String[] combo, int k) {
@@ -66,181 +58,172 @@ public class Q01_TopKFrequentWords {
  * - 把大问题拆分成许多小问题
  * - 每个小问题独立处理
  * - 可以并行执行
- *
- *
- *
- *
+ * <p>
+ * <p>
+ * <p>
+ * <p>
  * 举例1 - 统计单词：
- *
- *
+ * <p>
+ * <p>
  * 原始文本：
  * "hello world hello hadoop"
- *
+ * <p>
  * Map操作：
  * mapper1: "hello" -> (hello, 1), (world, 1)
  * mapper2: "hello hadoop" -> (hello, 1), (hadoop, 1)
- *
+ * <p>
  * 本质：把大文件拆分成小片段，每个mapper独立处理自己的那一片
- *
- *
- *
- *
+ * <p>
+ * <p>
+ * <p>
+ * <p>
  * 举例2 - 计算平均分：
- *
- *
+ * <p>
+ * <p>
  * 原始数据：
  * "Tom 90", "Jerry 85", "Tom 95", "Jerry 90"
- *
+ * <p>
  * Map操作：
  * mapper1: "Tom 90" -> (Tom, [90])
- *          "Jerry 85" -> (Jerry, [85])
+ * "Jerry 85" -> (Jerry, [85])
  * mapper2: "Tom 95" -> (Tom, [95])
- *          "Jerry 90" -> (Jerry, [90])
- *
+ * "Jerry 90" -> (Jerry, [90])
+ * <p>
  * 本质：把学生成绩数据拆分，每个mapper处理部分数据
- *
- *
- *
- *
+ * <p>
+ * <p>
+ * <p>
+ * <p>
  * Reduce 的核心思想：
- *
+ * <p>
  * Reduce = 合并结果（Conquer）
  * - 收集相同key的所有值
  * - 对这些值进行归并处理
  * - 产生最终结果
- *
- *
- *
- *
+ * <p>
+ * <p>
+ * <p>
+ * <p>
  * 继续上面的例子：
- *
+ * <p>
  * 单词统计的Reduce：
- *
- *
+ * <p>
+ * <p>
  * Reduce收到的输入：
  * (hello, [1,1])    -> (hello, 2)
  * (world, [1])      -> (world, 1)
  * (hadoop, [1])     -> (hadoop, 1)
- *
+ * <p>
  * 本质：合并同一个单词的所有计数
- *
- *
- *
- *
+ * <p>
+ * <p>
+ * <p>
+ * <p>
  * 平均分计算的Reduce：
- *
- *
+ * <p>
+ * <p>
  * Reduce收到的输入：
  * (Tom, [90,95])    -> (Tom, 92.5)
  * (Jerry, [85,90])  -> (Jerry, 87.5)
- *
+ * <p>
  * 本质：计算每个学生的平均分
- *
- *
- *
- *
+ * <p>
+ * <p>
+ * <p>
+ * <p>
  * MapReduce 的设计哲学：
- *
+ * <p>
  * 1) 数据本地性处理
- *    - 移动计算而不是移动数据
- *    - 每个mapper处理本地数据
- *
+ * - 移动计算而不是移动数据
+ * - 每个mapper处理本地数据
+ * <p>
  * 2) 键值对模型
- *    - Map: (key1, value1) -> list(key2, value2)
- *    - Reduce: (key2, list(value2)) -> list(key3, value3)
- *
+ * - Map: (key1, value1) -> list(key2, value2)
+ * - Reduce: (key2, list(value2)) -> list(key3, value3)
+ * <p>
  * 3) 并行计算
- *    - 多个mapper同时处理不同数据片段
- *    - 多个reducer同时处理不同key的数据
- *
+ * - 多个mapper同时处理不同数据片段
+ * - 多个reducer同时处理不同key的数据
+ * <p>
  * public class TopKMapReduce {
- *     // 1. Mapper: 每个mapper找出局部的top k
- *     public static class TopKMapper
- *         extends Mapper<LongWritable, Text, NullWritable, Text> {
+ * // 1. Mapper: 每个mapper找出局部的top k
+ * public static class TopKMapper
+ * extends Mapper<LongWritable, Text, NullWritable, Text> {
+ * <p>
+ * private PriorityQueue<Product> minHeap;
+ * private int k;
  *
- *         private PriorityQueue<Product> minHeap;
- *         private int k;
- *
- *         @Override
- *         protected void setup(Context context) {
- *             k = context.getConfiguration().getInt("k", 10);
- *             minHeap = new PriorityQueue<>((a, b) -> a.sales - b.sales);
- *         }
- *
- *         @Override
- *         public void map(LongWritable key, Text value, Context context) {
- *             // 解析输入：productId,sales
- *             String[] fields = value.toString().split(",");
- *             Product product = new Product(
- *                 fields[0],
- *                 Integer.parseInt(fields[1])
- *             );
- *
- *             // 维护大小为k的最小堆
- *             minHeap.offer(product);
- *             if (minHeap.size() > k) {
- *                 minHeap.poll();
- *             }
- *         }
- *
- *         @Override
- *         protected void cleanup(Context context)
- *             throws IOException, InterruptedException {
- *             // 输出局部top k
- *             while (!minHeap.isEmpty()) {
- *                 Product product = minHeap.poll();
- *                 context.write(
- *                     NullWritable.get(),
- *                     new Text(product.id + "," + product.sales)
- *                 );
- *             }
- *         }
- *     }
- *
- *     // 2. Reducer: 合并所有mapper的结果，找出全局top k
- *     public static class TopKReducer
- *         extends Reducer<NullWritable, Text, NullWritable, Text> {
- *
- *         private PriorityQueue<Product> minHeap;
- *         private int k;
- *
- *         @Override
- *         protected void setup(Context context) {
- *             k = context.getConfiguration().getInt("k", 10);
- *             minHeap = new PriorityQueue<>((a, b) -> a.sales - b.sales);
- *         }
- *
- *         @Override
- *         public void reduce(NullWritable key, Iterable<Text> values,
- *                          Context context)
- *             throws IOException, InterruptedException {
- *             // 处理所有mapper的输出
- *             for (Text value : values) {
- *                 String[] fields = value.toString().split(",");
- *                 Product product = new Product(
- *                     fields[0],
- *                     Integer.parseInt(fields[1])
- *                 );
- *
- *                 minHeap.offer(product);
- *                 if (minHeap.size() > k) {
- *                     minHeap.poll();
- *                 }
- *             }
- *
- *             // 输出最终结果（逆序）
- *             List<Product> result = new ArrayList<>();
- *             while (!minHeap.isEmpty()) {
- *                 result.add(0, minHeap.poll());
- *             }
- *
- *             for (Product product : result) {
- *                 context.write(
- *                     NullWritable.get(),
- *                     new Text(product.id + "," + product.sales)
- *                 );
- *             }
- *         }
- *     }
+ * @Override protected void setup(Context context) {
+ * k = context.getConfiguration().getInt("k", 10);
+ * minHeap = new PriorityQueue<>((a, b) -> a.sales - b.sales);
+ * }
+ * @Override public void map(LongWritable key, Text value, Context context) {
+ * // 解析输入：productId,sales
+ * String[] fields = value.toString().split(",");
+ * Product product = new Product(
+ * fields[0],
+ * Integer.parseInt(fields[1])
+ * );
+ * <p>
+ * // 维护大小为k的最小堆
+ * minHeap.offer(product);
+ * if (minHeap.size() > k) {
+ * minHeap.poll();
+ * }
+ * }
+ * @Override protected void cleanup(Context context)
+ * throws IOException, InterruptedException {
+ * // 输出局部top k
+ * while (!minHeap.isEmpty()) {
+ * Product product = minHeap.poll();
+ * context.write(
+ * NullWritable.get(),
+ * new Text(product.id + "," + product.sales)
+ * );
+ * }
+ * }
+ * }
+ * <p>
+ * // 2. Reducer: 合并所有mapper的结果，找出全局top k
+ * public static class TopKReducer
+ * extends Reducer<NullWritable, Text, NullWritable, Text> {
+ * <p>
+ * private PriorityQueue<Product> minHeap;
+ * private int k;
+ * @Override protected void setup(Context context) {
+ * k = context.getConfiguration().getInt("k", 10);
+ * minHeap = new PriorityQueue<>((a, b) -> a.sales - b.sales);
+ * }
+ * @Override public void reduce(NullWritable key, Iterable<Text> values,
+ * Context context)
+ * throws IOException, InterruptedException {
+ * // 处理所有mapper的输出
+ * for (Text value : values) {
+ * String[] fields = value.toString().split(",");
+ * Product product = new Product(
+ * fields[0],
+ * Integer.parseInt(fields[1])
+ * );
+ * <p>
+ * minHeap.offer(product);
+ * if (minHeap.size() > k) {
+ * minHeap.poll();
+ * }
+ * }
+ * <p>
+ * // 输出最终结果（逆序）
+ * List<Product> result = new ArrayList<>();
+ * while (!minHeap.isEmpty()) {
+ * result.add(0, minHeap.poll());
+ * }
+ * <p>
+ * for (Product product : result) {
+ * context.write(
+ * NullWritable.get(),
+ * new Text(product.id + "," + product.sales)
+ * );
+ * }
+ * }
+ * }
  * }
  */

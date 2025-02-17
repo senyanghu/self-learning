@@ -1,6 +1,6 @@
 package A_10_Recursion_2;
 
-import A_04_Tree.TreeNode;
+import Utils.TreeNode;
 
 public class Q06_LowestCommonAncestor {
     public TreeNode lowestCommonAncestor(TreeNode root,

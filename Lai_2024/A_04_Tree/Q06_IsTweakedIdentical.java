@@ -1,5 +1,7 @@
 package A_04_Tree;
 
+import Utils.TreeNode;
+
 public class Q06_IsTweakedIdentical {
     public boolean isTweakedIdentical(TreeNode one, TreeNode two) {
         // base case: both nodes are null

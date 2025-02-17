@@ -1,18 +1,8 @@
 package A_05_Heap_Graph_1;
 
+import Utils.Cell;
+
 import java.util.PriorityQueue;
-
-class Cell {
-    int row;
-    int col;
-    int value;
-
-    public Cell(int row, int col, int value) {
-        this.row = row;
-        this.col = col;
-        this.value = value;
-    }
-}
 
 public class Q02_KSmallestInMatrix {
     public int KthSmallest(int[][] matrix, int k) {

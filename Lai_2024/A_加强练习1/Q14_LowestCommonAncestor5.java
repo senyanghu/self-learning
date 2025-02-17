@@ -1,5 +1,7 @@
 package A_加强练习1;
 
+import Utils.KnaryTreeNode;
+
 import java.util.Set;
 
 // k叉树里面寻找k个node的LCA

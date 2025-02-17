@@ -1,10 +1,6 @@
 package A_02_Recursion_BinarySearch;
 
-abstract class Dictionary {
-    public Integer get(int index) {
-        return 0;
-    }
-}
+import Utils.Dictionary;
 
 public class Q08_SearchUnknownSizedArray {
     public int search(Dictionary dict, int target) {

@@ -1,5 +1,7 @@
 package A_04_Tree;
 
+import Utils.TreeNode;
+
 public class Q07_IsBST {
     public boolean isValidBST(TreeNode root) {
         return isValidBST(root, Long.MIN_VALUE, Long.MAX_VALUE);
