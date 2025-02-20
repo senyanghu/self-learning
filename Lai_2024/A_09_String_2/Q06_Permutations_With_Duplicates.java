@@ -5,6 +5,21 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
+/*
+p0 p1 p2
+x  x  x
+
+input = a b c
+
+L0 (position0)        a(bc)          b(ac)          c(ab)
+                     /     \        /     \        /     \
+L1                b(c)    c(b)    a(c)   c(a)    a(b)   b(a)
+                   |       |        |      |       |      |
+L2                 c       b        c      a       b      a
+
+
+Time = O(n!)
+ */
 public class Q06_Permutations_With_Duplicates {
 
     public List<String> permutations(String set) {
