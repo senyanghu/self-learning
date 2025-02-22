@@ -1,22 +1,13 @@
 package A_05_Heap_Graph_1;
 
 
-import java.util.ArrayList;
+import Utils.GraphNode;
+
 import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
 import java.util.Queue;
-
-class GraphNode {
-    public int key;
-    public List<GraphNode> neighbors;
-
-    public GraphNode(int key) {
-        this.key = key;
-        this.neighbors = new ArrayList<GraphNode>();
-    }
-}
 
 public class Q04_IsBipartite {
     public boolean isBipartite(List<GraphNode> graph) {
@@ -33,7 +24,10 @@ public class Q04_IsBipartite {
                         if (!visited.containsKey(neighbor)) {
                             queue.offer(neighbor);
                             visited.put(neighbor, 1 - currentColor);
-                        } else if (!visited.get(neighbor).equals(currentColor)) { // neighbor is already been visited
+                        }
+                        // neighbor is already been visited
+                        // neighbor的颜色跟currentNode的颜色一样了
+                        else if (visited.get(neighbor).equals(currentColor)) {
                             return false;
                         }
                     }
