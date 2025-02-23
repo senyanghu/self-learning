@@ -1,4 +1,4 @@
-package A_加强练习5;
+package A_加强练习5_BFS;
 
 /*
 Given a series of strings, find two strings that have no common characters AND their length product is maximum.

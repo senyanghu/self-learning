@@ -1,4 +1,4 @@
-package A_加强练习5;
+package A_加强练习5_BFS;
 
 // https://www.geeksforgeeks.org/trapping-rain-water/
 

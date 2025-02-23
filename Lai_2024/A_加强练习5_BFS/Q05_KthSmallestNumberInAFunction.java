@@ -1,4 +1,4 @@
-package A_加强练习5;
+package A_加强练习5_BFS;
 
 /*
 How to find the k-th smallest number in the function

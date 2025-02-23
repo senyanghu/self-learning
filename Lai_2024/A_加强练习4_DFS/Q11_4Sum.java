@@ -1,4 +1,4 @@
-package A_加强练习4;
+package A_加强练习4_DFS;
 
 /*
 这种写法可以保证 for for loop 里，枚举的每个 pair <i, j>
