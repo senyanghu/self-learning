@@ -1,4 +1,4 @@
-package Notes;
+package B_Notes;
 
 /*
 时间复杂度是 O(n)

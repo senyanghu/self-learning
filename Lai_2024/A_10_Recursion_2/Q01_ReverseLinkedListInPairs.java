@@ -1,7 +1,7 @@
 package A_10_Recursion_2;
 
 
-import A_03_Queue_Stack_LinkedList.ListNode;
+import Utils.ListNode;
 
 public class Q01_ReverseLinkedListInPairs {
     public ListNode reverseInPairs(ListNode head) {

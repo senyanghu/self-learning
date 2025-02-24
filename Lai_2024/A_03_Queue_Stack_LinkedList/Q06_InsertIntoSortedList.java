@@ -1,5 +1,7 @@
 package A_03_Queue_Stack_LinkedList;
 
+import Utils.ListNode;
+
 public class Q06_InsertIntoSortedList {
     public ListNode insertIntoSortedList(ListNode head, int value) {
         ListNode newNode = new ListNode(value);

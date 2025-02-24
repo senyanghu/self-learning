@@ -1,5 +1,7 @@
 package A_03_Queue_Stack_LinkedList;
 
+import Utils.ListNode;
+
 public class Q09_PartitionLinkedList {
     public ListNode partition(ListNode head, int target) {
         if (head == null || head.next == null) {

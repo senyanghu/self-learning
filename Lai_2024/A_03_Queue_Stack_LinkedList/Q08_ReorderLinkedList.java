@@ -1,5 +1,7 @@
 package A_03_Queue_Stack_LinkedList;
 
+import Utils.ListNode;
+
 // See: https://github.com/senyanghu/DaddyPlaypen/blob/master/src/com/laioffer/hw03/queue_stack_linkedlist/Q11_ReorderLinkedList.java
 // 一个复杂的题目是几个简单的题目合成的
 // N1 -> N2 -> .......Nn

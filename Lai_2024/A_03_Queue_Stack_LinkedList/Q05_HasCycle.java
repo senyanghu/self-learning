@@ -1,5 +1,7 @@
 package A_03_Queue_Stack_LinkedList;
 
+import Utils.ListNode;
+
 public class Q05_HasCycle {
     public boolean hasCycle(ListNode head) {
         if (head == null || head.next == null) {

@@ -1,5 +1,7 @@
 package A_03_Queue_Stack_LinkedList;
 
+import Utils.ListNode;
+
 public class Q03_ReverseLinkedList {
     public ListNode reverseRecursive(ListNode head) {
         if (head == null || head.next == null) {

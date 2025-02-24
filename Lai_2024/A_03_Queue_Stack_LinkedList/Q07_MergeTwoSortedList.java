@@ -1,5 +1,7 @@
 package A_03_Queue_Stack_LinkedList;
 
+import Utils.ListNode;
+
 // Question: When should we maintain the dummy head?
 //
 // Answer:
