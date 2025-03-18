@@ -20,7 +20,8 @@ public class Q04_BoggleGame_Trie {
             throw new IllegalArgumentException("invalid input");
         }
         // step one --> build the Trie from the given list of words.
-        TrieNode root = buildDict(words);
+        // TrieNode root = buildDict(words);
+        TrieNode root = new TrieNode();
         final int rows = board.length;
         final int cols = board[0].length;
         StringBuilder sb = new StringBuilder();

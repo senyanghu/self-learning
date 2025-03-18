@@ -8,6 +8,8 @@ import Utils.ListNode;
 
 偶数长度 (1->2->3->4):
 - 返回中间偏左的节点 (2)
+
+这样做的好处是永远对于下半截的List的头有所控制
  */
 public class Q04_MiddleNode {
     public ListNode middleNode(ListNode head) {
