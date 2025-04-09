@@ -4,7 +4,7 @@ import Utils.TreeNode;
 
 // LCA in a BST
 // 想想BST的性质
-public class Q17_LowestCommonAncestor7 {
+public class Q17_LCA7 {
     public TreeNode solution(TreeNode root, TreeNode one, TreeNode two) {
         if (root == null)
             return root;

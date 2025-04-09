@@ -5,7 +5,7 @@ import Utils.KnaryTreeNode;
 
 // LCA for two nodes in K-naryTree
 // k-叉树 找两个nodes的LCA
-public class Q13_LowestCommonAncestor4 {
+public class Q13_LCA4 {
     public KnaryTreeNode LCA(KnaryTreeNode root, KnaryTreeNode a, KnaryTreeNode b) {
         if (root == null || root == a || root == b) {
             return root;

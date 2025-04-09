@@ -24,7 +24,6 @@ public class Q08_TreeNodeWithinRange {
         if (root.val > min) { // 优化
             getRangerHelper(root.left, min, max, res);
         }
-        getRangerHelper(root.left, min, max, res);
         if (root.val >= min && root.val <= max) {
             res.add(root.val);
         }

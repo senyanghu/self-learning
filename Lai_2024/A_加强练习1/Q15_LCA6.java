@@ -3,7 +3,7 @@ package A_加强练习1;
 // Here's the text from the image:
 //
 //Q5.6 LCA for two nodes a and b in a very large tree that contains billions of nodes
-public class Q15_LowestCommonAncestor6 {
+public class Q15_LCA6 {
 }
 
 

@@ -8,7 +8,6 @@ import java.util.Queue;
 // 对于完全二叉树的判断，我们可以使用BFS层序遍历，主要思路是：如果遇到了一个空节点后，后面不应该再有非空节点。
 
 /*
-
 经典例题3: Determine whether a binary tree is a complete binary tree
 
 [Binary tree diagram showing:]

@@ -2,9 +2,9 @@ package A_10_Recursion_2;
 
 import Utils.TreeNode;
 
-public class Q06_LowestCommonAncestor {
-    public TreeNode lowestCommonAncestor(TreeNode root,
-                                         TreeNode one, TreeNode two) {
+public class Q06_LCA1 {
+    public TreeNode LCA(TreeNode root,
+                        TreeNode one, TreeNode two) {
         if (root == null) {
             return null;
         }
@@ -12,8 +12,8 @@ public class Q06_LowestCommonAncestor {
             return root;
         }
 
-        TreeNode left = lowestCommonAncestor(root.left, one, two);
-        TreeNode right = lowestCommonAncestor(root.right, one, two);
+        TreeNode left = LCA(root.left, one, two);
+        TreeNode right = LCA(root.right, one, two);
 
         // case 1: If both sides are null
         // case 2: one side returns not NULL, and the other is NULL, return non-Null side

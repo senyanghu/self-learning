@@ -1,8 +1,6 @@
 package A_08_Hash_And_String_1;
 
-/**
- * Given a string, remove all leading/trailing/duplicated empty spaces
- */
+// Given a string, remove all leading/trailing/duplicated empty spaces
 // "____abc__de___f_____"
 // "abc_de_f"
 // i: slow all letter to the left-hand side of i are the results to return

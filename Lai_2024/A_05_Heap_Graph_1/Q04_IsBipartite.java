@@ -11,8 +11,8 @@ import java.util.Queue;
 
 public class Q04_IsBipartite {
     public boolean isBipartite(List<GraphNode> graph) {
-        Map<GraphNode, Integer> visited = new HashMap<GraphNode, Integer>();
-        Queue<GraphNode> queue = new LinkedList<GraphNode>();
+        Map<GraphNode, Integer> visited = new HashMap<>();
+        Queue<GraphNode> queue = new LinkedList<>();
         for (GraphNode node : graph) {
             if (!visited.containsKey(node)) {
                 queue.offer(node);

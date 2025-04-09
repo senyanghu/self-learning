@@ -23,7 +23,7 @@ import java.util.List;
  * The lowest common ancestor of 2, 3, 14 is 5
  * The lowest common ancestor of 2, 3, 9 is 9
  */
-public class Q12_LowestCommonAncestor3 {
+public class Q12_LCA3 {
     public TreeNode lca(TreeNode root, List<TreeNode> nodes) {
         Set<TreeNode> nodeSet = new HashSet<>(nodes);
         return lacHelper(root, nodeSet);

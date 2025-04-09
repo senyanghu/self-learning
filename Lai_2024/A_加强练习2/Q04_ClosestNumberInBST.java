@@ -11,7 +11,7 @@ Given a BST, how to find the node with its value closest to a target value x?
 2   7   12    20
 
 Solution:
-Maintain a closest node.
+Maintain the closest node.
 Start from the root node as cur.
 Case 1: If (cur.value == target) just return cur
 Case 2: If (cur.value < target) calculate the diff, if the |diff| is smaller than the closest node, update it.
