@@ -1,0 +1,41 @@
+https://www.1point3acres.com/bbs/tag/mongodb-712-1.html
+https://www.1point3acres.com/bbs/forum.php?mod=forumdisplay&fid=145&filter=sortid&sortid=311&orderby=dateline
+https://www.hellointerview.com/learn/system-design/deep-dives/elasticsearch
+
+
+Phone Interview
+1. https://www.1point3acres.com/bbs/thread-1104172-1-1.html
+######
+inverted index look up document
+follow up 1, needs to support delete
+follow up 2, ask what happen to multiple thread try to add and delete at same time, how to prevent issue
+######
+
+2. https://www.1point3acres.com/bbs/thread-1081419-1-1.html
+######
+MongoDB Atlas Search - General backend
+HR reach out, just went ahead, no harm to try.
+店面:
+俄罗斯前端组男 Senior
+地里最常考那道 inverted index (search + update + delete)
+Virtual Onsite:
+1. Coding - Union Iterator
+印度后端组男 Senior
+Given two iterators with stricted sorted order, implement hasNext() and next() with constant space.
+2. Concurrency - Web Crawler
+中国后端组女 Senior (Fiona C) 全程黑脸challenge 面试体验最差的一轮 高高在上 每次回答都会challenge你 完全没有和teammate合作的感觉。
+问的很细 不能纯调API 比如parallelStream() 一定要求写native code.
+3. System Design - Search Index
+印度后端组男 staff （面试晚了30min 告诉我忘记面试了 LOL）
+先设计 high level，无非是读写两条线，然后dive into details, 分别对读写进行优化
+强调针对读的优化
+4. Director
+白人男
+相互介绍 + BQ + 组情况了解
+5. HM
+中东男
+相互介绍 + BQ + 组情况了解
+面试结束到通知结果 过了大概2周左右 最后HR通知挂了 问feedback 也是挂在了concurrency这一轮
+其实在后两轮 director/HM 都有问有没有feedback给到面试官 当时想想觉得都是中国人 就算了 只是说大家working style不一样 习惯就好
+希望国人面试官在职场真的要对同胞nice一点 工作只是工作而已 不要觉得自己是面试官就高高在上 印度人在职场已经报团了 中国人再内斗只能让环境越来越恶化。
+######
