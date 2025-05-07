@@ -39,13 +39,13 @@ public class Q05_LRU {
         return node;
     }
 
-    private Map<Integer, DoublyLinkedNode> map;
+    private Map<Integer, DoublyLinkedNode> cache;
     private int capacity;
     private int count;
     private DoublyLinkedNode head, tail;
 
     public Q05_LRU(int capacity) {
-        this.map = new HashMap<>();
+        this.cache = new HashMap<>();
         this.capacity = capacity;
         this.count = 0;
         head = new DoublyLinkedNode();
@@ -57,7 +57,7 @@ public class Q05_LRU {
     }
 
     public int get(int key) {
-        DoublyLinkedNode node = this.map.get(key);
+        DoublyLinkedNode node = this.cache.get(key);
         if (node == null) {
             return -1;
         }
@@ -66,17 +66,17 @@ public class Q05_LRU {
     }
 
     public void put(int key, int value) {
-        DoublyLinkedNode node = this.map.get(key);
+        DoublyLinkedNode node = this.cache.get(key);
         if (node == null) {
             node = new DoublyLinkedNode();
             node.key = key;
             node.value = value;
-            this.map.put(key, node);
+            this.cache.put(key, node);
             this.addToHead(node);
             this.count++;
             if (count > this.capacity) {
                 DoublyLinkedNode poppedNode = this.popTail();
-                this.map.remove(poppedNode.key);
+                this.cache.remove(poppedNode.key);
             }
         } else {
             node.value = value;

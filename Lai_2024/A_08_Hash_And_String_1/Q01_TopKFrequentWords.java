@@ -15,7 +15,7 @@ public class Q01_TopKFrequentWords {
         for (String word : combo) {
             frequencyMap.put(word, frequencyMap.getOrDefault(word, 0) + 1);
         }
-        PriorityQueue<Pair<T, Number>> minHeap = new PriorityQueue<>((p1, p2) -> {
+        PriorityQueue<Pair> minHeap = new PriorityQueue<>((p1, p2) -> {
             if (p1.freq == p2.freq) {
                 return 0;
             } else if (p1.freq < p2.freq) {
@@ -26,7 +26,7 @@ public class Q01_TopKFrequentWords {
         });
 
         for (Map.Entry<String, Integer> entry : frequencyMap.entrySet()) {
-            Pair<T, Number> pair = new Pair<T, Number>(entry.getKey(), entry.getValue());
+            Pair pair = new Pair(entry.getKey(), entry.getValue());
             minHeap.add(pair);
             if (minHeap.size() > k) {
                 minHeap.poll();
@@ -51,9 +51,9 @@ public class Q01_TopKFrequentWords {
 
 /**
  * 让我从概念和思想层面解释 Map 和 Reduce：
- *
+ * <p>
  * Map 的核心思想：
- *
+ * <p>
  * Map = 分而治之（Divide）
  * - 把大问题拆分成许多小问题
  * - 每个小问题独立处理

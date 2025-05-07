@@ -1,0 +1,44 @@
+https://www.linkedin.com/jobs/view/software-engineer-3-atlas-foundational-services-at-mongodb-4125055929/
+
+About the job
+MongoDB’s mission is to empower innovators to create, transform, and disrupt industries by unleashing the power of software and data. We enable organizations of all sizes to easily build, scale, and run modern applications by helping them modernize legacy workloads, embrace innovation, and unleash AI. Our industry-leading developer data platform, MongoDB Atlas, is the only globally distributed, multi-cloud database and is available in more than 115 regions across AWS, Google Cloud, and Microsoft Azure. Atlas allows customers to build and run applications anywhere—on premises, or across cloud providers. With offices worldwide and over 175,000 new developers signing up to use MongoDB every month, it’s no wonder that leading organizations, like Samsung and Toyota, trust MongoDB to build next-generation, AI-powered applications.
+
+The Atlas Foundational Services team develops and operates tier-zero services, frameworks and libraries that form the backbone of Atlas - MongoDB’s fully managed multi-cloud database service. Our newly formed organization is spearheading the first re-architecture effort since the inception of Atlas and empowers other MongoDB teams to build more robust, performant and maintainable features faster. We are a group of engineers and engineering leaders from a variety of backgrounds who share a passion for solving difficult distributed systems problems to the benefit of real-world customers. We prioritize security, durability, availability and performance in everything we do. If you share our passion, have practical experience building large-scale, distributed systems and are looking to work with and learn from other kind and capable engineers, we are looking for you!
+
+This role can be based out of our New York City or Seattle office, or remotely in the United States.
+
+Requirements
+
+BSc or higher in Computer Science or equivalent experience
+Strong theoretical background in Distributed Systems and/or Database Management Systems
+At least 3 years of practical experience in Software Engineering
+Experience building and operating scalable, distributed production systems in a compiled language (Java, C#, Go, Rust, etc.)
+Experience building cloud native systems with a public cloud provider (AWS, Azure, GCP, etc)
+Experience at mitigating and resolving outages or other high-impact events in production cloud environments
+Strong verbal and written communication skills, including technical writing
+Ability to work backwards from business problems to technical solutions
+Ability to break down complex technical problems and deliver solutions incrementally
+
+Responsibilities
+
+Collaborate on the scope of work for new software components or features in collaboration with peer engineers and other stakeholders (product managers, engineering leadership, etc.)
+Implement robust services and software components
+Operate large-scale, distributed systems including root cause analysis of defects and mitigation in case of outages
+Adhere to and improve engineering and operational best practices and processes for the team
+Take ownership of software delivery, including setting and meeting milestones and stakeholder communication
+
+Live our core values and leadership principles in your work
+
+To drive the personal growth and business impact of our employees, we’re committed to developing a supportive and enriching culture for everyone. From employee affinity groups, to fertility assistance and a generous parental leave policy, we value our employees’ wellbeing and want to support them along every step of their professional and personal journeys. Learn more about what it’s like to work at MongoDB, and help us make an impact on the world!
+
+MongoDB is committed to providing any necessary accommodations for individuals with disabilities within our application and interview process. To request an accommodation due to a disability, please inform your recruiter.
+
+MongoDB, Inc. provides equal employment opportunities to all employees and applicants for employment and prohibits discrimination and harassment of any type and makes all hiring decisions without regard to race, color, religion, age, sex, national origin, disability status, genetics, protected veteran status, sexual orientation, gender identity or expression, or any other characteristic protected by federal, state or local laws.
+
+Req ID: 4253045896
+
+MongoDB’s base salary range for this role is posted below. Compensation at the time of offer is unique to each candidate and based on a variety of factors such as skill set, experience, qualifications, and work location. Salary is one part of MongoDB’s total compensation and benefits package. Other benefits for eligible employees may include: equity, participation in the employee stock purchase program, flexible paid time off, 20 weeks fully-paid gender-neutral parental leave, fertility and adoption assistance, 401(k) plan, mental health counseling, access to transgender-inclusive health insurance coverage, and health benefits offerings. Please note, the base salary range listed below and the benefits in this paragraph are only applicable to U.S.-based candidates.
+
+MongoDB’s base salary range for this role in the U.S. is:
+
+$101,000—$198,000 USD

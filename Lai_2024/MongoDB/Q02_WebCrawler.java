@@ -9,9 +9,7 @@ import java.util.stream.Stream;
 // https://leetcode.com/problems/web-crawler-multithreaded/solutions/419264/java-streams-concurrenthashmap-60-ms
 
 interface HtmlParser {
-    public default List<String> getUrls(String url) {
-        return null;
-    }
+    public List<String> getUrls(String url);
 }
 
 public class Q02_WebCrawler {
@@ -35,21 +33,21 @@ public class Q02_WebCrawler {
     }
 
     /**
-     // 例子 1:
-     url = "http://leetcode.com/problems"
-     //     0123456789
-     //     ----7----
-     idx = url.indexOf('/', 7) // 返回 17
-     result = "http://leetcode.com"
-
-     // 例子 2:
-     url = "http://leetcode.com"
-     idx = url.indexOf('/', 7) // 返回 -1
-     result = "http://leetcode.com"
+     * // 例子 1:
+     * url = "http://leetcode.com/problems"
+     * //     0123456789
+     * //     ----7----
+     * idx = url.indexOf('/', 7) // 返回 17
+     * result = "http://leetcode.com"
+     * <p>
+     * // 例子 2:
+     * url = "http://leetcode.com"
+     * idx = url.indexOf('/', 7) // 返回 -1
+     * result = "http://leetcode.com"
      */
     private String getHostname(String url) {
         int idx = url.indexOf('/', 7);
-        return (idx == -1) ? url: url.substring(0, idx);
+        return (idx == -1) ? url : url.substring(0, idx);
     }
 
     private boolean isSameHostname(String url, String hostname) {
