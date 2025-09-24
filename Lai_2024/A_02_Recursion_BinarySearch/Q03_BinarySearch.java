@@ -1,5 +1,8 @@
 package A_02_Recursion_BinarySearch;
 
+// binary search 两大诀窍
+// (1) 每一次要把问题的scope narrow down
+// (2) 在每一轮的迭代不能把potential result给误删
 public class Q03_BinarySearch {
     public int binarySearch(int[] array, int target) {
         if (array == null || array.length == 0) {
