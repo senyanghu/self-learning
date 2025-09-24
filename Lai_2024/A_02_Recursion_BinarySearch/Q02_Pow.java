@@ -8,10 +8,12 @@ public class Q02_Pow {
     public long power(int a, int b) {
         if (b == 0) {
             return 1;
-        } else if (b % 2 == 1) {
-            return a * power(a, b / 2) * power(a, b / 2);
+        }
+        long half = power(a, b / 2);
+        if (b % 2 == 1) {
+            return a * half * half;
         } else {
-            return power(a, b / 2) * power(a, b / 2);
+            return half * half;
         }
     }
 
