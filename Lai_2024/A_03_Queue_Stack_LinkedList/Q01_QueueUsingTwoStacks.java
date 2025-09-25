@@ -1,14 +1,17 @@
 package A_03_Queue_Stack_LinkedList;
 
-import java.util.Stack;
+// Stack is deprecated
+// import java.util.Stack; 
+import java.util.ArrayDeque;
+import java.util.Deque;
 
 public class Q01_QueueUsingTwoStacks {
-    private Stack<Integer> in;
-    private Stack<Integer> out;
+    private Deque<Integer> in;
+    private Deque<Integer> out;
 
     public Q01_QueueUsingTwoStacks() {
-        in = new Stack<>();
-        out = new Stack<>();
+        in = new ArrayDeque<>();
+        out = new ArrayDeque<>();
     }
 
     public Integer poll() {
@@ -39,5 +42,20 @@ public class Q01_QueueUsingTwoStacks {
 
     public boolean isEmpty() {
         return in.isEmpty() && out.isEmpty();
+    }
+
+    public static void main(String[] args) {
+        Q01_QueueUsingTwoStacks queue = new Q01_QueueUsingTwoStacks();
+        queue.offer(1);
+        queue.offer(2);
+        queue.offer(3);
+
+        System.out.println("Peek: " + queue.peek()); // Should print 1
+        System.out.println("Poll: " + queue.poll()); // Should print 1
+        System.out.println("Poll: " + queue.poll()); // Should print 2
+        System.out.println("Is empty? " + queue.isEmpty()); // Should print false
+        System.out.println("Poll: " + queue.poll()); // Should print 3
+        System.out.println("Is empty? " + queue.isEmpty()); // Should print true
+        System.out.println("Poll: " + queue.poll()); // Should print null
     }
 }
