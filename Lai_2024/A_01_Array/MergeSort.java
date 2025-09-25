@@ -8,17 +8,17 @@ public class MergeSort {
         }
 
         int[] helper = new int[array.length];
-        MergeSort(array, helper, 0, array.length - 1);
+        mergeSort(array, helper, 0, array.length - 1);
         return array;
     }
 
-    public void MergeSort(int[] array, int[] helper, int left, int right) {
+    public void mergeSort(int[] array, int[] helper, int left, int right) {
         if (left >= right) {
             return;
         }
         int mid = (left + right) / 2;
-        MergeSort(array, helper, left, mid);
-        MergeSort(array, helper, mid + 1, right);
+        mergeSort(array, helper, left, mid);
+        mergeSort(array, helper, mid + 1, right);
 
         combine(array, helper, left, mid, right);
     }
@@ -58,4 +58,3 @@ public class MergeSort {
         }
     }
 }
-
