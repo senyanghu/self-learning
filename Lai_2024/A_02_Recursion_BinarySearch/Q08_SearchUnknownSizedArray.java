@@ -21,12 +21,14 @@ public class Q08_SearchUnknownSizedArray {
             int mid = left + (right - left) / 2;
             Integer value = dict.get(mid);
 
-            if (value == null || value > target) {
+            if (value == null) {
                 right = mid - 1;
+            } else if (value == target) {
+                return mid;             // Found the target
             } else if (value < target) {
                 left = mid + 1;
-            } else {
-                return mid;  // Found the target
+            } else { 
+                right = mid - 1;        // value > target
             }
         }
 
