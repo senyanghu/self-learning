@@ -58,4 +58,30 @@ public class Q03_IsComplete {
         }
         return true;
     }
+
+    public boolean isCompleteByAI(TreeNode root) {
+        if (root == null)
+            return true;
+
+        Queue<TreeNode> queue = new LinkedList<>();
+        queue.offer(root);
+        boolean foundNull = false;
+
+        while (!queue.isEmpty()) {
+            TreeNode node = queue.poll();
+
+            if (node == null) {
+                foundNull = true;
+            } else {
+                // 如果已经发现空节点，又遇到非空节点
+                if (foundNull) {
+                    return false;
+                }
+                // 将左右子节点加入队列（包括null）
+                queue.offer(node.left);
+                queue.offer(node.right);
+            }
+        }
+        return true;
+    }
 }
