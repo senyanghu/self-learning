@@ -9,7 +9,17 @@ import Utils.TreeNode;
 
 空间复杂度：O(h)
 ** h 是树的高度
-** 递归栈的深度 */
+** 递归栈的深度 
+
+T(n) = T(n_left) + T(n_right) + O(1)
+T(n) = T(n_left) + T(n_right) + O(1)
+     ≤ T(n-1) + O(1)  // 最坏情况：一个子树为空
+     = T(n-2) + O(1) + O(1)
+     = T(n-3) + O(1) + O(1) + O(1)
+     = ...
+     = T(0) + n × O(1)
+     = O(n)
+*/
 public class Q07_IsBST {
     public boolean isValidBST(TreeNode root) {
         return isValidBST(root, Long.MIN_VALUE, Long.MAX_VALUE);
