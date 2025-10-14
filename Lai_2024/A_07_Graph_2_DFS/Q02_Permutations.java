@@ -50,6 +50,6 @@ public class Q02_Permutations {
 
     public static void main(String args[]) {
         Q02_Permutations sol = new Q02_Permutations();
-        System.out.println(sol.permutations("abcd"));
+        System.out.println(sol.permutations("abc"));
     }
 }
