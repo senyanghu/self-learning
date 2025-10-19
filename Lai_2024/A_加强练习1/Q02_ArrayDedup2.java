@@ -1,7 +1,5 @@
 package A_加强练习1;
 
-import java.util.Arrays;
-
 /**
  * 跟上面一条题目相比 最多保留两个元素怎么做？
  * <p>

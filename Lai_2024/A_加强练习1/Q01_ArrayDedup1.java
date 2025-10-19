@@ -1,7 +1,5 @@
 package A_加强练习1;
 
-import java.util.Arrays;
-
 /**
  * Given a sorted integer array, remove duplicate elements. For each group of
  * elements with the same value keep only one of them. Do this in-place, using
