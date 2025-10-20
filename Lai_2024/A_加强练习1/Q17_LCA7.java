@@ -6,8 +6,9 @@ import Utils.TreeNode;
 // 想想BST的性质
 public class Q17_LCA7 {
     public TreeNode solution(TreeNode root, TreeNode one, TreeNode two) {
-        if (root == null)
+        if (root == null) {
             return root;
+        }
 
         if (root.val < one.val && root.val < two.val) {
             return solution(root.right, one, two);
