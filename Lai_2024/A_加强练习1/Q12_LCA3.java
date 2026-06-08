@@ -16,10 +16,10 @@ import java.util.List;
  * <p>
  * Examples
  * 5
- * / \
- * 9 12
- * / \ \
- * 2 3 14
+ * /   \
+ * 9     12
+ * /  \      \
+ * 2    3      14
  * The lowest common ancestor of 2, 3, 14 is 5
  * The lowest common ancestor of 2, 3, 9 is 9
  */

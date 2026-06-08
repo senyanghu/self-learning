@@ -9,6 +9,7 @@ import java.util.PriorityQueue;
 /*
 How to merge K sorted arrays into one big sorted array
 
+
 assumptions:
 - length
 - ascending / descending
@@ -28,6 +29,7 @@ public class Q03_MergeKSortedArray {
                 return 1;
             }
         });
+
 
         for (int i = 0; i < arrayOfArrays.length; i++) {
             int[] array = arrayOfArrays[i];

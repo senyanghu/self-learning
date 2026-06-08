@@ -14,8 +14,8 @@ public class Q06_IsTweakedIdentical {
         if (one.val != two.val) {
             return false;
         }
-
-        return (isTweakedIdentical(one.left, two.left) && isTweakedIdentical(one.right, two.right)) || (isTweakedIdentical(one.left, one.right) && isTweakedIdentical(one.right, two.left));
+        return (isTweakedIdentical(one.left, two.left) && isTweakedIdentical(one.right, two.right))
+        || (isTweakedIdentical(one.left, two.right) && isTweakedIdentical(one.right, two.left));
     }
 }
 

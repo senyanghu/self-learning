@@ -21,6 +21,4 @@ Call LCA(root, a, M7, level_limit=5)
 
 Case 3: neither a nor b is within top 5 layers.
 Call LCA(M1, a, b), LCA(M2, a, b) ... LCA(M32, a, b)
-
-
  */

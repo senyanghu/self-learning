@@ -14,7 +14,8 @@ public class Q03_GenParentheses {
         return res;
     }
 
-    private void dfs(int n, int left, int right, StringBuilder sb, List<String> res) {
+    private void dfs(int n, int left, int right, 
+                     StringBuilder sb, List<String> res) {
         if (left == n && right == n) {
             res.add(sb.toString());
             return;

@@ -17,7 +17,8 @@ s4: "fgz" (size = 3)
 Solution shows that "abcde" × "fgz" = 5 × 3 = 15 is the answer, as these strings have no common characters and
 their length product (15) is the maximum possible from the given strings.
 
-看notes里面的PQ的解法 BSF2
+看notes里面的PQ的解法 BSF2 (Best First Search)
+BFS1 = 层序/FIFO，BFS2 = 优先级队列/PQ
 */
 public class Q04_Find2StringWithMaxProduct {
 }

@@ -15,8 +15,7 @@ package A_加强练习1;
  * return the number of elements being reserved
  */
 public class Q01_ArrayDedup1 {
-    // slow: all elements to the left hand side of slow (INcluding slow) are the
-    // results
+    // slow: all elements to the left hand side of slow (INcluding slow) are the results
     // fast: current index
     public int dedup_including(int[] array) {
         if (array == null || array.length == 0) {

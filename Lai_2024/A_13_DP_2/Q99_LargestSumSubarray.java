@@ -4,8 +4,8 @@ public class Q99_LargestSumSubarray {
     // base case: M[i] = array[i]
     // induction rule:
     // M[i] represents the largest sum of subarray ending with i-th number
-    // M[i] = M[i - 1] + array[i] if M[i - 1] >= 0
-    // = array[i] otherwise
+    // M[i] = M[i - 1] + array[i]     if M[i - 1] >= 0
+    //      = array[i]         	     otherwise
     public int largest(int[] nums) {
         if (nums == null || nums.length == 0) {
             return Integer.MIN_VALUE;
@@ -62,7 +62,6 @@ public class Q99_LargestSumSubarray {
         for (int i = 1; i < nums.length; i++) {
             if (lastMax >= 0) {
                 lastMax = lastMax + nums[i];
-                // this is not necessary
                 // left = left;
                 right = i;
             } else {
@@ -86,7 +85,8 @@ public class Q99_LargestSumSubarray {
 
     public static void main(String args[]) {
         Q99_LargestSumSubarray lss = new Q99_LargestSumSubarray();
-        int[] nums = { 1, 2, 4, -1, -12, 10, -1 };
+        int[] nums = {1, 2, 4, -1, -12, 10, -1};
         System.out.println(lss.largest(nums));
     }
 }
+

@@ -14,8 +14,8 @@ public class Q09_FindAllAnagrams {
 
         // Create a Map to record the metadata of the short string, aka S.
         Map<Character, Integer> map = new HashMap<>();
-        for (char c : s.toCharArray()) {
-            map.put(c, map.getOrDefault(c, 0) + 1);
+        for (char ch : s.toCharArray()) {
+            map.put(ch, map.getOrDefault(ch, 0) + 1);
         }
 
         // How many kinds of letters we need to match

@@ -13,7 +13,8 @@ public class Q04_CoinCombinations {
         return res;
     }
 
-    private void dfs(int remaining, List<List<Integer>> res, List<Integer> combination, int index) {
+    private void dfs(int remaining, List<List<Integer>> res, 
+                    List<Integer> combination, int index) {
         if (index == coins.length) {
             if (remaining == 0) {
                 res.add(new ArrayList<>(combination));
@@ -21,10 +22,16 @@ public class Q04_CoinCombinations {
             return;
         }
         int limit = remaining / coins[index];
-        for (int i = 0; i < limit; i++) {
-            combination.add(coins[index]);
+        for (int i = 0; i <= limit; i++) {
+            combination.add(i);
             dfs(remaining - i * coins[index], res, combination, index + 1);
             combination.remove(combination.size() - 1);
         }
+    }
+    public static void main(String[] args) {
+        Q04_CoinCombinations solver = new Q04_CoinCombinations();
+        int target = 100;
+        List<List<Integer>> res = solver.coinCombinations(target);
+        System.out.println(res);
     }
 }

@@ -21,4 +21,9 @@ public class Q02_MaxProductOfCuttingRope {
 
         return M[length];
     }
+
+    public static void main(String[] args) {
+        Q02_MaxProductOfCuttingRope sol = new Q02_MaxProductOfCuttingRope();
+        System.out.println(sol.maxProduct(12));
+    }
 }

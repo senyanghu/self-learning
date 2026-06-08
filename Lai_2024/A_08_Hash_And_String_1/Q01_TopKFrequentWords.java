@@ -13,7 +13,8 @@ public class Q01_TopKFrequentWords {
         }
         Map<String, Integer> frequencyMap = new HashMap<>();
         for (String word : combo) {
-            frequencyMap.put(word, frequencyMap.getOrDefault(word, 0) + 1);
+            frequencyMap.put(word, 
+                frequencyMap.getOrDefault(word, 0) + 1);
         }
         PriorityQueue<Pair> minHeap = new PriorityQueue<>((p1, p2) -> {
             if (p1.freq == p2.freq) {
@@ -41,7 +42,7 @@ public class Q01_TopKFrequentWords {
 
     public static void main(String args[]) {
         Q01_TopKFrequentWords topK = new Q01_TopKFrequentWords();
-        String[] combo = {"Jessi", "Jessi", "Jessi", "Nick", "David", "Jon", "Jon"};
+        String[] combo = {"Alex", "Alex", "Alex", "David", "David","Nick", "David", "Jon", "Jon"};
         String[] res = topK.topKFrequent(combo, 2);
         for (String str : res) {
             System.out.println(str);

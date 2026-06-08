@@ -54,4 +54,13 @@ public class Q06_Permutations_With_Duplicates {
         charArray[i] = charArray[j];
         charArray[j] = temp;
     }
+
+    public static void main(String[] args) {
+        Q06_Permutations_With_Duplicates permutations = new Q06_Permutations_With_Duplicates();
+        String set = "abbc";
+        List<String> result = permutations.permutations(set);
+        for (String str : result) {
+            System.out.println(str);
+        }
+    }
 }
