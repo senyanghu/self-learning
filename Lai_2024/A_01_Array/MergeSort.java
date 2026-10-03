@@ -12,18 +12,18 @@ public class MergeSort {
         return array;
     }
 
-    public void mergeSort(int[] array, int[] helper, int left, int right) {
+    private void mergeSort(int[] array, int[] helper, int left, int right) {
         if (left >= right) {
             return;
         }
-        int mid = (left + right) / 2;
+        int mid = left + (right - left) / 2;
         mergeSort(array, helper, left, mid);
         mergeSort(array, helper, mid + 1, right);
 
         combine(array, helper, left, mid, right);
     }
 
-    public void combine(int[] array, int[] helper, int left, int mid, int right) {
+    private void combine(int[] array, int[] helper, int left, int mid, int right) {
         for (int i = left; i <= right; i++) {
             helper[i] = array[i];
         }
@@ -31,7 +31,7 @@ public class MergeSort {
         int rightIndex = mid + 1;
         int currentIndex = left;
         while (leftIndex <= mid && rightIndex <= right) {
-            if (helper[leftIndex] < helper[rightIndex]) {
+            if (helper[leftIndex] <= helper[rightIndex]) {
                 array[currentIndex] = helper[leftIndex];
                 leftIndex++;
             } else {
@@ -49,7 +49,7 @@ public class MergeSort {
         // as they are already in their correct positions
     }
 
-    public static void main(String args[]) {
+    public static void main(String[] args) {
         MergeSort ms = new MergeSort();
         int[] array = {3, -1, -10, -9};
         int[] result = ms.mergeSort(array);
